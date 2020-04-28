@@ -32,7 +32,7 @@
                     </div>
                     <div class="bordered_1px">
                         <h2>Kondisi : 
-                                <?php var_dump($count);  if (empty($count)): ?>
+                                <?php if (empty($count)): ?>
                                     Sepi
                                 <?php elseif ($count->c < 15): ?>
                                     Sepi ada orang
