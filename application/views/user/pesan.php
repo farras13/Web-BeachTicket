@@ -56,7 +56,7 @@
                             <div class="col-lg-12">
                                 <div class="single_input">
                                     <label>Amount</label>
-                                    <input type="number" name="qty" placeholder="1" required>
+                                    <input type="number" name="qty" min="1" placeholder="1" required>
                                 </div>
                             </div>
 
@@ -67,7 +67,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="single_input">
-                                    <a class="btn btn-warning btn-block" href="<?= base_url(); ?>"><strong>Go Back</strong></a>
+                                    <a class="btn btn-warning btn-block" href="javascript:history.go(-1)"><strong>Go Back</strong></a>
                                 </div>
                             </div>
                         </div>

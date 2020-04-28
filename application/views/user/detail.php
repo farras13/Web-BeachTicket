@@ -64,12 +64,17 @@
                                 <div class="col-lg-12">
                                     <div class="single_input">
                                         <label>Amount</label>
-                                        <input type="number" name="qty" placeholder="tuliskan jumlah tiket yang anda butuhkan">
+                                        <input type="number" min="1" name="qty" placeholder="tuliskan jumlah tiket yang anda butuhkan">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="submit_btn">
                                         <button class="boxed-btn4" type="submit">Booking</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12" style="margin-top: 15px;"> 
+                                    <div class="single_input">
+                                        <a class="btn btn-warning btn-block" href="javascript:history.go(-1)"><strong>Go Back</strong></a>
                                     </div>
                                 </div>
                             </div>

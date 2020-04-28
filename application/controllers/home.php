@@ -9,10 +9,6 @@ class Home extends CI_Controller {
 		//Do your magic here
 		$this->load->model('vacation');
 		$a = $this->session->userdata('user_login');
-		$lvl = $a['level'];
-		if ($lvl != 0) {
-			redirect('Admin', 'refresh');
-		}
 	}
 
 	public function index()
@@ -81,11 +77,14 @@ class Home extends CI_Controller {
 		if ($userdata == null) {
 			redirect('login','refresh');
 		}
+		
 		$id = $this->input->post('id_vct');
 		$data['qty'] = $this->input->post('qty');
+		$hrg = $this->input->post('harga');
 		$data['dt'] = $this->input->post('tanggal'); 
 		$data['userdata'] = $this->session->userdata('user_login');
 		$data['p'] = $this->vacation->getbyId($id)->row();
+		$data['ttl'] = number_format($hrg * $data['qty']) ;
 		$this->load->view('template/header', $data);
 		$this->load->view('user/detail_pesan', $data);
 		$this->load->view('template/footer');

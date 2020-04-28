@@ -17,7 +17,11 @@
                                 <div class="col-lg-12">
                                     <div class="single_input">
                                         <label>No Rekening</label>
-                                        <input type="number"  min="8" name="norek" placeholder="Masukkan no Rekening anda" required="">
+                                        <input type="number"  minlength="8" name="norek" placeholder="Masukkan no Rekening anda" required="">
+                                    </div>
+                                    <div class="single_input">
+                                        <label>Total Harga</label>
+                                        <input type="number" min="1" name="totalHarga" value="<?=$ttl;?>" readonly="">
                                     </div>
                                 </div>
                                 <h4>Data user</h4>
@@ -77,7 +81,7 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="single_input">
-                                        <a class="btn btn-warning btn-block" href="<?= base_url(); ?>"><strong>Go Back</strong></a>
+                                        <a class="btn btn-warning btn-block" href="javascript:history.go(-1)"><strong>Go Back</strong></a>
                                     </div>
                                 </div>
                             </div>
