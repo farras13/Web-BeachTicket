@@ -80,11 +80,12 @@ class Home extends CI_Controller {
 		
 		$id = $this->input->post('id_vct');
 		$data['qty'] = $this->input->post('qty');
-		$hrg = $this->input->post('harga');
+		$hrg = $this->input->post('hrg');
 		$data['dt'] = $this->input->post('tanggal'); 
 		$data['userdata'] = $this->session->userdata('user_login');
 		$data['p'] = $this->vacation->getbyId($id)->row();
-		$data['ttl'] = number_format($hrg * $data['qty']) ;
+		$data['ttl'] =number_format($hrg * $data['qty'],2,",",".") ;
+		var_dump($data['qty'], $hrg);
 		$this->load->view('template/header', $data);
 		$this->load->view('user/detail_pesan', $data);
 		$this->load->view('template/footer');

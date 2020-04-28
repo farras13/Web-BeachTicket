@@ -21,7 +21,7 @@
                                     </div>
                                     <div class="single_input">
                                         <label>Total Harga</label>
-                                        <input type="number" min="1" name="totalHarga" value="<?=$ttl;?>" readonly="">
+                                        <input type="text" name="totalHarga" value="<?= $ttl;?>" readonly="">
                                     </div>
                                 </div>
                                 <h4>Data user</h4>

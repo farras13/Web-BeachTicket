@@ -50,7 +50,7 @@
                             <div class="col-lg-12">
                                 <div class="single_input">
                                     <label>harga</label>
-                                    <input type="number" name="harga" value="<?= $p->harga; ?>" readonly="">
+                                    <input type="number" name="hrg" value="<?= $p->harga; ?>" readonly="">
                                 </div>
                             </div>
                             <div class="col-lg-12">

@@ -52,7 +52,7 @@
                                     <div class="single_input">
                                         <label>Harga</label>
                                          <input type="text" name="id_vct" value="<?= $p->id_vacation; ?>" hidden>
-                                        <input type="text" name="hrg" value="Rp. <?= $p->harga; ?>" disabled="">
+                                        <input type="number" name="hrg" value="<?= $p->harga; ?>" readonly="">Rp.
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
