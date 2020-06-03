@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/slicknav.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/datepicker/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
-
+    <?php echo $map['js']; ?>
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>

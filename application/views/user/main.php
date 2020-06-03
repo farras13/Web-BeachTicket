@@ -56,7 +56,13 @@
 
     </div>
     <!-- slider_area_end -->
-
+    <div class="comtainer">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <?php echo $map['html']; ?>
+            </div>
+        </div>
+    </div>
     <!-- where_togo_area_start  -->
     <div class="where_togo_area" id="a">
         <div class="container">

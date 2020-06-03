@@ -26,8 +26,12 @@
                             <h4>Day-03</h4>
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
                         </div>
+                        <div class="single_destination">
+                            <?= $p->keterangan_vacation; ?>
+                        </div>
                         <?php else: ?>
                             <?= $p->konten_vacation; ?>
+                            <?= $p->keterangan_vacation; ?>
                         <?php endif ?>
                     </div>
                     <div class="bordered_1px">
