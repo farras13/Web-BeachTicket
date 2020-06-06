@@ -12,6 +12,9 @@
                                     <div class="single_input">    
                                        <img height="250" width="250" src="<?= base_url().'assets/uploads/'.$image_name;  ?>">
                                     </div>
+                                    <div>
+                                        <h4><?=$qr; ?></h4>
+                                    </div>
                                 </div>
 
                                 <div class="col-lg-12">

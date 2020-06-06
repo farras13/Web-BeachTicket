@@ -157,7 +157,7 @@
                                 <a href="<?= base_url() ?>home/detail/<?= $p->id_vacation ?>">
                                     <h3><?= $p->nama_vacation; ?></h3>
                                 </a>
-                                <p><?= $p->keterangan_vacation; ?></p>
+                                <!-- <p><?= $p->keterangan_vacation; ?></p> -->
                                 <div class="rating_days d-flex justify-content-between">
                                     <span class="d-flex justify-content-center align-items-center">
                                         <?php if (!empty($count)) : ?>
@@ -175,6 +175,9 @@
                                         <?php else : ?>
                                             Status : Sepi (0 Pengunjung)
                                         <?php endif ?>
+                                    </span>
+                                    <span>
+                                        Pengunjung : <?= $sts->counter; ?>
                                     </span>
                                     <div class="days">
                                         <i class="fa fa-clock-o"></i>

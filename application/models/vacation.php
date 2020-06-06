@@ -113,6 +113,7 @@ class Vacation extends CI_Model {
         GROUP by DATE(b.tanggal_booking)
         ORDER BY id_vacation asc");
     }
+   
 }
 
 /* End of file vacation.php */

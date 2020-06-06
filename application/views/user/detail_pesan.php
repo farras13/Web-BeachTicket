@@ -51,7 +51,7 @@
                                         <?php if ($dt != null): ?>
                                             <input type="text" name="tanggal" value="<?=$dt?>"  readonly="">
                                         <?php else: ?>
-                                            <input type="text" name="tanggal" value="<?= date("d M Y"); ?>"  readonly="">   
+                                            <input type="text" name="tanggal" value="<?= date("dd/mm/YYYY"); ?>"  readonly="">   
                                         <?php endif ?>
                                         
                                     </div>

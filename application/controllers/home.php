@@ -10,6 +10,7 @@
 			//Do your magic here
 			$this->load->model('vacation');
 			$a = $this->session->userdata('user_login');
+			error_reporting(0);
 		}
 
 		public function index()
@@ -24,6 +25,7 @@
 			// 	);
 			// }
 			$c = $this->vacation->getCount()->result_array();
+			$data['sts'] = $this->db->query("SELECT * from datacounter order by id desc limit 1")->row();	
 			$n = 0;
 			$this->viewmaps();
 			foreach ($peta as $p) {
@@ -31,19 +33,24 @@
 					if ($c[$n]['id_vacation'] == $p->id_vacation) :
 						if ($c[$n]['c'] < 15) :
 							$a = $c[$n]['c'];
+							$pengunjung = $data['sts']->counter;
 						elseif ($c[$n]['c'] < 60) :
 							$a = $c[$n]['c'];
+							$pengunjung = $data['sts']->counter;
 						else :
 							$a = $c[$n]['c'];
+							$pengunjung = $data['sts']->counter;
 						endif;
 					else :
 						$a = 0;
+						$pengunjung = $data['sts']->counter;
 					endif;
 				else :
 					$a = 0;
+					$pengunjung = $data['sts']->counter;
 				endif;
 				$marker = array();
-				$marker['infowindow_content'] = "'<h3> $p->nama_vacation </h3>''<h4>pengunjung : $a</h4>'";
+				$marker['infowindow_content'] = "'<h3> $p->nama_vacation </h3>''<h4>Booked : $a</h4>''<h4>Pengunjung : $pengunjung </h4>'";
 				$marker['position'] = $p->peta;//Posisi marker (itu tuh yang merah2 lancip itu loh :-p)
 				$this->googlemaps->add_marker($marker);
 			}
